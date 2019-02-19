@@ -1,0 +1,451 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Index.master.cs" Inherits="Index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="JQUERY/jquery-1.11.3.js"></script>
+    <script src="JQUERY/jquery-1.11.3.min.js"></script>
+    <style type="text/css">
+        body{
+              font-family: 'Ubuntu', sans-serif;
+            width:980px;
+            margin:0px auto;
+            padding:0px;
+        }
+           .maincontent{
+                width:980px;
+             
+                    margin:0px auto;
+            padding:0px;
+           }
+   
+           .socialmedia{
+                  width:100%;
+                  height:50px;
+                  text-align:right;
+           }
+           .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+        .content1{
+            position:relative;
+            width:100%;
+            height:400px;
+        }
+        .content1 img{
+           width:100%;
+           height:400px;
+        }
+        .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+      .content1:hover .overlay {
+  opacity: 1;
+}  
+.text {
+    font-family:Arial;
+    font-style:italic;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+         .content2{
+              width:100%;
+            height:278px;
+            background:#c9cbb5;
+        }
+   
+          .content3{
+               width:100%;
+            height:570px;
+            background:#b4ab8f;
+        }
+          
+
+p{
+  color:#525252;
+  font-size:12px;
+}
+
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+.project{
+        width:100%;
+            height:400px;
+            background:#7e959c;
+            text-align:center;
+}
+           .content4{
+                width:100%;
+            height:400px;
+            background:#9fb690;
+            text-align:center;
+        }
+           .content4 h1{
+               margin-top:5px;
+               color:cornflowerblue;
+               font-family:Arial;
+               font-style:italic;
+
+           }
+           .mainfooter{
+              width:980px;
+             /*position:relative;*/ 
+            margin-bottom: 0px;
+        }
+           .query{
+            width:480px;
+            height:300px;
+            float:left;
+            background:#095d87;
+           }
+           .contact{
+                 width:480px;
+            height:300px;
+            float:right;
+            background:#4b8cbd;
+           }
+           .contact h1{
+               color:white;
+               font-family:Arial;
+               font-size:x-large;
+           }
+           .contact img{
+                 border-radius: 50%;
+           }
+           .copy{
+               width:980px;
+               height:25px;
+               background:black;
+               text-align:center;
+               color:white;
+           }
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 138px;
+        }
+        .auto-style3 {
+            color: #FFFFFF;
+            font-size: x-large;
+        }
+        .auto-style4 {
+            width: 138px;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .auto-style5 {
+            font-size: x-large;
+        }
+        .auto-style6 {
+            width: 332px;
+        }
+        .auto-style7 {
+            color: #FFFFFF;
+        }
+        .auto-style8 {
+            font-size: x-large;
+            color: #0000CC;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+  
+    <div class="maincontent">
+        <div class="socialmedia">
+            <a href="https://www.facebook.com/riaz.uddin.733450" class="fa fa-facebook">f</a>
+            <a href="https://twitter.com/riazisl08074036" class="fa fa-twitter">t</a>
+
+        </div>
+        <div class="content1">
+            <img src="Images/IMG_1360.JPG" alt="imtioperation/Imtiyaz" />
+              <div class="overlay">
+    <div class="text">HI IAM IMTIYAZ</div>
+  </div>
+        </div>
+          <div class="content2">
+              <p style="margin-top:10px;text-align:center;font-style:italic;font-size:30px;font-family:Arial;">Trust me when I say that most of the changes I’ve brought in my life have been sparked by reading some sort of quote. When life seems complicated, sometimes all you need is a different vantage point to look at things differently and a quote lets you do that.
+
+A quote lets you look through the eyes of another person, and gives you the opportunity to see their perspective. It allows you to see what they might have learned in a lifetime, almost instantly.</p>
+        </div>
+          <div class="content3">
+              <h1>MY SKILLS</h1>
+              <br />
+<div class="skillbar clearfix " data-percent="85%">
+	<div class="skillbar-title" style="background: #d35400;"><span>HTML</span></div>
+	<div class="skillbar-bar" style="background: #e67e22;"></div>
+	<div class="skill-bar-percent">85%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="70%">
+	<div class="skillbar-title" style="background: #2980b9;"><span>CSS</span></div>
+	<div class="skillbar-bar" style="background: #3498db;"></div>
+	<div class="skill-bar-percent">70%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="55%">
+	<div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+	<div class="skillbar-bar" style="background: #2c3e50;"></div>
+	<div class="skill-bar-percent">55%</div>
+</div> <!-- End Skill Bar -->
+              <div class="skillbar clearfix " data-percent="60%">
+	<div class="skillbar-title" style="background: #61c116;"><span>JScript</span></div>
+	<div class="skillbar-bar" style="background: #61c116;"></div>
+	<div class="skill-bar-percent">60%</div>
+</div> <!-- End Skill Bar -->
+<div class="skillbar clearfix " data-percent="75%">
+	<div class="skillbar-title" style="background: #46465e;"><span>C#</span></div>
+	<div class="skillbar-bar" style="background: #5a68a5;"></div>
+	<div class="skill-bar-percent">75%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="65%">
+	<div class="skillbar-title" style="background: #333333;"><span>ASP.NET</span></div>
+	<div class="skillbar-bar" style="background: #525252;"></div>
+	<div class="skill-bar-percent">65%</div>
+</div> <!-- End Skill Bar -->
+              <div class="skillbar clearfix " data-percent="67%">
+	<div class="skillbar-title" style="background:#b71515;"><span>SQL</span></div>
+	<div class="skillbar-bar" style="background: #b71515;"></div>
+	<div class="skill-bar-percent">67%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="72%">
+	<div class="skillbar-title" style="background: #27ae60;"><span>C++</span></div>
+	<div class="skillbar-bar" style="background: #2ecc71;"></div>
+	<div class="skill-bar-percent">72%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="63%">
+	<div class="skillbar-title" style="background: #0ead73;"><span>JAVA</span></div>
+	<div class="skillbar-bar" style="background: #0ead73;"></div>
+	<div class="skill-bar-percent">63%</div>
+
+</div> <!-- End Skill Bar -->
+              <div class="skillbar clearfix " data-percent="70%">
+	<div class="skillbar-title" style="background: #124e8c;"><span>ENGLISH</span></div>
+	<div class="skillbar-bar" style="background: #4288d0;"></div>
+	<div class="skill-bar-percent">70%</div>
+
+</div> <!-- End Skill Bar -->
+              <script type="text/javascript">
+                  jQuery(document).ready(function () {
+                      jQuery('.skillbar').each(function () {
+                          jQuery(this).find('.skillbar-bar').animate({
+                              width: jQuery(this).attr('data-percent')
+                          }, 6000);
+                      });
+                  });
+              </script>
+        </div>
+        <div class="project">
+
+            <br />
+   
+            <h1 class="auto-style7">What kind of projects i can do</h1>
+            <br class="auto-style8" />
+
+            <strong><span class="auto-style8">Any kind of website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <br class="auto-style8" />
+            <span class="auto-style8">Business Management System&nbsp;&nbsp; &nbsp; </span><br class="auto-style8" />
+            <span class="auto-style8">Shop Management System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </span>
+            <br class="auto-style8" />
+            <span class="auto-style8">School management System&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span>
+            <br class="auto-style8" />
+            <span class="auto-style8">Any more software&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><span class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+    
+            <marquee style="font-size:20px; color: #FFFFFF"><p>Project is created as desired by the user
+So call now for your required software or website</p></marquee>
+        </div>
+          <div class="content4">
+              <h1><b><strong>STUDENT LIFE</strong></b></h1>
+              <div class="school">
+
+                  <asp:ImageButton ID="ImageButton1" runat="server" Height="104px" ImageUrl="~/Images/sch.jpg" OnClick="ImageButton1_Click" Width="154px" />
+
+              </div>
+               <div class="college">
+
+                   <asp:ImageButton ID="ImageButton4" runat="server" Height="104px" ImageUrl="~/Images/college.png" OnClick="ImageButton4_Click" Width="154px" />
+
+              </div>
+               <div class="university">
+
+                   <asp:ImageButton ID="ImageButton5" runat="server" Height="104px" ImageUrl="~/Images/university.jpg" OnClick="ImageButton5_Click" Width="154px" />
+
+              </div>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="mainfooter">
+            <div class="query">
+
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style4">
+                            <br class="auto-style3" />
+                            <span class="auto-style3">PHONE</span></td>
+                        <td class="auto-style6">
+                            <asp:TextBox ID="txtphone" runat="server" Height="49px" Width="254px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4">
+                            <br class="auto-style3" />
+                            <span class="auto-style5">EMAIL</span></td>
+                        <td class="auto-style6">
+                            <asp:TextBox ID="txtemail" runat="server" Height="42px" Width="254px"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtemail" ErrorMessage="error" Font-Bold="True" ForeColor="White" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4">
+                            <br class="auto-style3" />
+                            <span class="auto-style3">MESSAGE</span></td>
+                        <td class="auto-style6">
+                            <asp:TextBox ID="txtmsg" TextMode="MultiLine" runat="server" Height="84px" Width="254px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2">&nbsp;</td>
+                        <td class="auto-style6">
+                            <asp:Button ID="Button1" runat="server" Text="MESSAGE" Width="189px" OnClick="Button1_Click" style="font-weight: 700; color: #0000CC" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2">&nbsp;</td>
+                        <td class="auto-style6">
+                            <asp:Label ID="lblmsg" runat="server" Text="" ForeColor="White" Font-Bold="true"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+                 <div class="contact">
+                     <h1>Contact Me</h1>
+                     <br />
+                     <img src="Images/_MG_0022.jpg" alt="imtiyaz" style="width:200px">
+                     <br />
+                     <p class="auto-style5"><span class="auto-style7"><strong>Phone: </strong></span> <a href="tel:01945368565"><strong>+8801945368565</strong></a><strong><br /><span class="auto-style7">Email:</span></strong><a href="https://mail.google.com/mail/u/0/">imtiazuddin475@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright by imtioperation.com</p>
+        </div>
+    </form>
+</body>
+</html>
